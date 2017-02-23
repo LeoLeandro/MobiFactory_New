@@ -1,12 +1,13 @@
 /**
  * 
  */
-package br.com.powerpet.ejb.dao.impl;
+package br.com.powerpet.ejb.dao.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.powerpet.ejb.constantes.TipoUsuario;
+import br.com.powerpet.ejb.dao.impl.DaoImpl;
 import br.com.powerpet.ejb.dto.ClienteDTO;
 import br.com.powerpet.ejb.dto.EnderecoDTO;
 import br.com.powerpet.ejb.dto.FornecedorDTO;
@@ -21,17 +22,20 @@ import br.com.powerpet.ejb.entidades.Funcionario;
 import br.com.powerpet.ejb.entidades.Pessoa;
 import br.com.powerpet.ejb.entidades.Telefone;
 import br.com.powerpet.ejb.entidades.Usuario;
+import br.com.powerpet.ejb.factory.DaoFactory;
+import br.com.powerpet.ejb.util.TipoEntidade;
 
 /**
+ * Classe intermediária entre EJB e DAO responsável por convertere DTOs em Entidades e chamar o DAO
  * @author Leonardo
  *
  */
 public class UsuarioServiceDao {
 
-	private UsuarioDaoImpl daoImpl;
+	private DaoImpl<Usuario> daoImpl;
 	
 	public UsuarioServiceDao() {
-		this.daoImpl = new UsuarioDaoImpl();
+		this.daoImpl = (DaoImpl<Usuario>) DaoFactory.criarDao(TipoEntidade.USUARIO);
 	}
 	
 	/**
@@ -75,7 +79,7 @@ public class UsuarioServiceDao {
 	}
 	
 	/**
-	 * 
+	 * Lista todos os usuários
 	 * @return
 	 */
 	public List<UsuarioDTO> listarUsuarios() {
@@ -92,7 +96,7 @@ public class UsuarioServiceDao {
 	}
 
 	/**
-	 * 
+	 * Recupera um usuário da base de acordo com um email passado como parâmetro
 	 * @param email
 	 * @return
 	 */
@@ -106,7 +110,7 @@ public class UsuarioServiceDao {
 	}
 	
 	/**
-	 * 
+	 * Método responsável por converter DTOs em Entidades persistentes
 	 * @param usuarioDTO
 	 * @return
 	 */
@@ -183,6 +187,7 @@ public class UsuarioServiceDao {
 	}
 
 	/**
+	 * Converte DTO de endereço em entidade persistente Endereco
 	 * @param usuarioDTO
 	 * @return
 	 */
@@ -200,7 +205,7 @@ public class UsuarioServiceDao {
 	}
 	
 	/**
-	 * 
+	 * Converte entidade Usuario em DTO de usuario
 	 * @param usuarios
 	 * @return
 	 */
@@ -217,9 +222,9 @@ public class UsuarioServiceDao {
 	}
 	
 	/**
-	 * 
+	 * Converte lista de entidade Usuario em lista de DTO de usuario
 	 * @param usuarios
-	 * @return
+	 * @return List<UsuarioDTO>
 	 */
 	private List<UsuarioDTO> converteEntidadeParaDTO(List<Usuario> usuarios) {
 		List<UsuarioDTO> usuariosDTO = new ArrayList<UsuarioDTO>();

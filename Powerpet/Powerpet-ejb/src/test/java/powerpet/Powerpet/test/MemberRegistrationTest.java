@@ -15,9 +15,9 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import br.com.powerpet.ejb.util.Resources;
 import powerpet.Powerpet.controller.MemberRegistration;
 import powerpet.Powerpet.model.Member;
-import powerpet.Powerpet.util.Resources;
 
 @RunWith(Arquillian.class)
 public class MemberRegistrationTest {

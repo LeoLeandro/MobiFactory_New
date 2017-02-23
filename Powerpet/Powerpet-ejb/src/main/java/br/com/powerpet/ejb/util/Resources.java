@@ -1,4 +1,4 @@
-package powerpet.Powerpet.util;
+package br.com.powerpet.ejb.util;
 
 import java.util.logging.Logger;
 

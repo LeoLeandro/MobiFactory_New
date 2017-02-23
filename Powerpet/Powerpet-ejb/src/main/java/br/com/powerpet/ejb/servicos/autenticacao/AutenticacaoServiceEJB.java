@@ -6,14 +6,14 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 import br.com.powerpet.ejb.constantes.MensagemExcecao;
-import br.com.powerpet.ejb.dao.impl.UsuarioServiceDao;
+import br.com.powerpet.ejb.dao.service.UsuarioServiceDao;
 import br.com.powerpet.ejb.dto.UsuarioDTO;
 import br.com.powerpet.ejb.excessoes.UsuarioInvalidoException;
 import br.com.powerpet.ejb.fachada.IAutenticacaoServicoEJBLocal;
 import br.com.powerpet.ejb.fachada.IAutenticacaoServicoEJBRemoto;
-import br.com.powerpet.ejb.factory.AbstractValidadorFactory;
+import br.com.powerpet.ejb.factory.ValidadorFactory;
+import br.com.powerpet.ejb.util.TipoEntidade;
 import br.com.powerpet.ejb.validadores.IValidador;
-import powerpet.Powerpet.util.TipoEntidade;
 
 /**
  * Session Bean implementation class AutenticacaoServiceEJB
@@ -25,7 +25,7 @@ public class AutenticacaoServiceEJB implements IAutenticacaoServicoEJBRemoto, IA
 	private UsuarioServiceDao usuarioServiceDao;
 	
 	@Inject
-	private AbstractValidadorFactory validadorFactory;
+	private ValidadorFactory validadorFactory;
 	
     /**
      * Default constructor. 

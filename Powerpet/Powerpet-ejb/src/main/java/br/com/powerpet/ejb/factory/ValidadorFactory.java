@@ -3,20 +3,19 @@
  */
 package br.com.powerpet.ejb.factory;
 
+import br.com.powerpet.ejb.util.TipoEntidade;
 import br.com.powerpet.ejb.validadores.IValidador;
 import br.com.powerpet.ejb.validadores.ValidadorUsuario;
-import powerpet.Powerpet.util.TipoEntidade;
 
 /**
  * @author Leonardo
  *
  */
-public class AbstractValidadorFactory implements IFactory {
+public class ValidadorFactory {
 
-	public AbstractValidadorFactory() {}
+	public ValidadorFactory() {}
 	
-	@Override
-	public IValidador criarValidador(TipoEntidade tipoEntidade) {
+	public static IValidador criarValidador(TipoEntidade tipoEntidade) {
 		
 		IValidador validador = null;
 		
