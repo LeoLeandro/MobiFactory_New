@@ -1,0 +1,129 @@
+====================== POWER PET ======================
+
+====> Entidades:
+
+Cliente
+Animal
+Funcionario
+Medicamento
+Produto
+Fornecedor
+RegistroFinanceiro
+ProcedimentoClinico
+CasoClinico
+Endereco
+Telefone
+Evento
+Hotelzinho
+
+----------------------
+
+====> Detalhamento de Entidades (Mapeamento de Herança):
+
+Pessoa
+	Cliente
+	Funcionario
+	Fornecedor
+
+Medicamento
+	Vacina
+	Vermifugo
+	Antipulga
+	Anticocepcional
+
+ProcedimentoClinico
+	Exame
+	Cirurgia
+	Banho
+	Tosa
+	Medicacao
+
+Animal
+Produto
+RegistroFinanceiro
+CasoClinico
+Endereco
+Telefone
+Evento
+Hotelzinho
+
+----------------------
+
+====> Funcionalidades:
+
+Cadastro
+	Funcionário
+	Cliente
+	Animal
+	Fornecedor
+
+Agendamento de Procedimento
+	Exame
+	Cirurgia
+	Banho
+	Tosa
+	Vacina
+	Vermifugo
+
+Farmácia
+	Cadastro de Medicamento
+	Venda de Medicamento
+	Listagem de Medicamentos
+
+PetShop
+	Admin
+		Cadastro de Produto
+		Venda de Produto
+		Listagem de Produto
+
+	Cliente
+		Listagem de Produtos
+		Filtrar Produtos
+		Comprar Produto
+
+Relatorio
+	Funcionarios
+	Clientes
+	Animais
+	Fornecedores
+	Procedimentos
+	Medicamentos
+	Produtos
+	Eventos
+	Finanças
+		Contas à pagar
+		Contas pagas
+		Vendas
+		Compras
+		Situação do Cliente
+		Salários
+	Diagnósticos
+	Vacinas por vencer
+	Vermifugos por vencer
+	Anticocepcional por vencer
+	Antipulgas por vencer
+	Hotelzinho (animais hospedados em determinado período)
+
+Hotelzinho
+	Check-In
+	Check-Out
+	Serviços
+		Cadastrar serviço (serviço realizado em determinado animal)
+		Listar serviços por animal (serviços realizados em determinado animal)
+
+
+Marketing
+	Envio de email
+		Clientes com pagamentos pendentes
+		Aniversariantes
+		Medicação pendente
+		Resultado de Exames
+		Novidades da clínica
+		Eventos
+
+	Agendamento de Eventos
+
+
+	
+
+

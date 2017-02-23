@@ -1,0 +1,30 @@
+====> Software para Gerenciamento de Clínica Veterinária
+
+Módulos:
+	* Financeiro
+		- Controle de finanças da empresa (Administrativo),
+		- Apresentação de relatórios (semanais, mensais, semestrais e anuais),
+		- Deve receber requisição dos módulos Clínica, Controle de Estoque e Web/Mobile, uma vez que um procedimento clínico, compra de produtos ou uma venda de produtos na web ocorra.
+	* Clínica
+		- Realização de procedimentos clínicos (cirurgia, consultas, exames, vacinação),
+		- Realização de Branho e Tosa,
+		- Marcação de procedimentos clínicos, branho e tosa.
+	* Controle de Estoque
+		- Informação (controle) de todos os produtos disponíveis para venda,
+		- Informação (controle) dos produtos usados pela própria clínica.
+	* Web/Mobile
+		- Interface Web e Mobile disponível para os clientes,
+		- Informações da clínica, possibilidade de vendas pela internet, possibilidade de agendamento de procedimento pela internet.
+	* Servidor/Fachada
+		- Provê serviços de acordo com a requisição do usuário,
+		- Engloba os módulos Financeiro, Clínica e Controle de Estoque
+		
+Arquitetura:
+	* Componentizada
+		- Cada módulo sendo um componente independente,
+		- Interfaces para conectar os componentes
+	* Módulo Web/Mobile implementado em Angular JS dentro da plataforma Ionic
+	* Servidor/Fachada, Controle de Estoque, Clínica e Financeiro implementados em Java
+		- Módulo Financeiro/Administrativo deve ter uma interface Desktop para a gestão realizada pela clínica
+		
+	
