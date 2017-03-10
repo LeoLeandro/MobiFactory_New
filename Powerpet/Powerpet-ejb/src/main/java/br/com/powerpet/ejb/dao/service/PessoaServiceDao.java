@@ -1,8 +1,13 @@
 /**
  * 
  */
-package br.com.powerpet.ejb.dao.impl;
+package br.com.powerpet.ejb.dao.service;
 
+import br.com.powerpet.ejb.dao.impl.ClienteDaoImpl;
+import br.com.powerpet.ejb.dao.impl.DaoImpl;
+import br.com.powerpet.ejb.dao.impl.FornecedorDaoImpl;
+import br.com.powerpet.ejb.dao.impl.FuncionarioDaoImpl;
+import br.com.powerpet.ejb.dao.impl.PessoaDaoImpl;
 import br.com.powerpet.ejb.entidades.Cliente;
 import br.com.powerpet.ejb.entidades.Fornecedor;
 import br.com.powerpet.ejb.entidades.Funcionario;

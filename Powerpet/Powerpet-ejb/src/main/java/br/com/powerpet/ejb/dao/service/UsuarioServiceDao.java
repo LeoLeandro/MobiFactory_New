@@ -26,7 +26,7 @@ import br.com.powerpet.ejb.factory.DaoFactory;
 import br.com.powerpet.ejb.util.TipoEntidade;
 
 /**
- * Classe intermediária entre EJB e DAO responsável por convertere DTOs em Entidades e chamar o DAO
+ * Classe intermediária entre EJB e DAO responsável por converter DTOs em Entidades e chamar o DAO
  * @author Leonardo
  *
  */

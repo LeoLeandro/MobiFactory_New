@@ -13,8 +13,6 @@ import br.com.powerpet.ejb.util.TipoEntidade;
  */
 public class DaoFactory {
 
-	public DaoFactory() {}
-
 	public static IDao<?> criarDao(TipoEntidade tipoEntidade) {
 
 		IDao<?> dao = null;

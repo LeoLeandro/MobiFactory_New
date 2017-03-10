@@ -24,9 +24,6 @@ public class AutenticacaoServiceEJB implements IAutenticacaoServicoEJBRemoto, IA
 	@Inject
 	private UsuarioServiceDao usuarioServiceDao;
 	
-	@Inject
-	private ValidadorFactory validadorFactory;
-	
     /**
      * Default constructor. 
      */
@@ -34,7 +31,7 @@ public class AutenticacaoServiceEJB implements IAutenticacaoServicoEJBRemoto, IA
 
 	@Override
 	public void inserirUsuario(UsuarioDTO usuarioDTO, boolean primeiroAcesso) throws UsuarioInvalidoException {
-		IValidador validador = this.validadorFactory.criarValidador(TipoEntidade.USUARIO);
+		IValidador validador = ValidadorFactory.criarValidador(TipoEntidade.USUARIO);
 		validador.validar(usuarioDTO, primeiroAcesso);
 		
 		if(primeiroAcesso) {
@@ -59,7 +56,7 @@ public class AutenticacaoServiceEJB implements IAutenticacaoServicoEJBRemoto, IA
 
 	@Override
 	public void atualizarUsuario(UsuarioDTO usuarioDTO) throws UsuarioInvalidoException {
-		IValidador validador = this.validadorFactory.criarValidador(TipoEntidade.USUARIO);
+		IValidador validador = ValidadorFactory.criarValidador(TipoEntidade.USUARIO);
 		validador.validar(usuarioDTO, false);
 		
 		this.usuarioServiceDao.atualizarUsuario(usuarioDTO);
